@@ -113,3 +113,78 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* Media Queries untuk Responsif */
+@media screen and (max-width: 768px) {
+  /* Konten utama */
+  .kontenutama {
+    flex-direction: column; /* Mengubah konten utama menjadi kolom */
+    height: auto; /* Menyesuaikan tinggi */
+    gap: 15px;
+  }
+
+  /* Mengubah tata letak content */
+  .content {
+    flex-direction: column; /* Mengubah menjadi kolom */
+    gap: 10px;
+  }
+
+  /* Mengubah ukuran konten item */
+  .content-item {
+    width: 100%;
+  }
+
+  /* Menyesuaikan gambar dan teks pada konten item */
+  .content-item-image, .content-item-text {
+    flex-basis: 100%; /* Membuat konten item mengambil 100% lebar */
+    text-align: center;
+  }
+
+  /* Mengubah ukuran header */
+  .header {
+    height: 150px; /* Menyesuaikan ukuran header */
+  }
+
+  /* Menyesuaikan tombol */
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Menyesuaikan ukuran font dan padding */
+  body {
+    font-size: 14px;
+  }
+
+  /* Menyesuaikan header */
+  .header {
+    height: 120px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem; /* Mengurangi ukuran font header */
+  }
+
+  .kontenutama {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  /* Menyesuaikan konten */
+  .content {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .content-item {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

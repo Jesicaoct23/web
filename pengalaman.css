@@ -3,18 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Gaya body */
-body {
+  }
+  
+  /* Gaya body */
+  body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f7f7fa;
+    background-color: #f7f7fa; /* Warna latar lembut */
     color: #333;
-}
-
-/* Gaya container */
-.container {
+  }
+  
+  /* Gaya container */
+  .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -22,111 +22,170 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Gaya header */
-.header {
-    background-color: #6b9080;
+  }
+  
+  /* Gaya header */
+  .header {
+    background-color: #6b9080; /* Hijau lembut */
     color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px 8px 0 0;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* Separator */
-.separator {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  /* Separator */
+  .separator {
     width: 100%;
     height: 4px;
     background: #35424a;
     margin: 20px 0;
-}
-
-/* Konten utama */
-.kontenutama {
-    background: #f2d0a4;
+  }
+  
+  /* Konten utama */
+  .kontenutama {
+    background: #f2d0a4; /* Warna krem lembut */
+    height: 150px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Tombol */
-.btn {
+  }
+  
+  /* Tombol */
+  .btn {
     background-color: #e0e0e0;
     color: #333;
+    border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    text-decoration: none;
     transition: all 0.3s ease;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: #c0c0c0;
-}
-
-/* Gaya main */
-main {
+  }
+  
+  /* Konten */
+  .content {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Gaya section */
-section {
-    margin-bottom: 20px;
-}
-
-section h2 {
-    background: #7F9F80;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-section ul li {
-    background: #e2e2e2;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-section ul li h3 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-/* Gaya footer */
-footer {
+    gap: 20px;
+  }
+  
+  .content-item {
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-item-image {
+    background-color: #e6e6ff; /* Biru muda lembut */
+    flex-basis: 40%;
+    padding: 20px;
+  }
+  
+  .content-item-text {
+    background-color: #ffdab9; /* Peach lembut */
+    flex-basis: 30%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  footer {
     text-align: center;
     padding: 15px;
-    background-color: #6b9080;
+    background-color: #6b9080; /* Warna yang sama dengan header */
     color: #ffffff;
     border-radius: 0 0 8px 8px;
-}
-
-footer p {
+  }
+  
+  footer p {
     margin: 0;
-    font-size: 14px;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
+  }
+  
+  /* Media Queries untuk Responsif */
+  @media screen and (max-width: 768px) {
+    /* Konten utama */
     .kontenutama {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column; /* Mengubah konten utama menjadi kolom */
+      height: auto; /* Menyesuaikan tinggi */
+      gap: 15px;
     }
-}
+  
+    /* Mengubah tata letak content */
+    .content {
+      flex-direction: column; /* Mengubah menjadi kolom */
+      gap: 10px;
+    }
+  
+    /* Mengubah ukuran konten item */
+    .content-item {
+      width: 100%;
+    }
+  
+    /* Menyesuaikan gambar dan teks pada konten item */
+    .content-item-image, .content-item-text {
+      flex-basis: 100%; /* Membuat konten item mengambil 100% lebar */
+      text-align: center;
+    }
+  
+    /* Mengubah ukuran header */
+    .header {
+      height: 150px; /* Menyesuaikan ukuran header */
+    }
+  
+    /* Menyesuaikan tombol */
+    .btn {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Menyesuaikan ukuran font dan padding */
+    body {
+      font-size: 14px;
+    }
+  
+    /* Menyesuaikan header */
+    .header {
+      height: 120px;
+    }
+  
+    .header h1 {
+      font-size: 1.5rem; /* Mengurangi ukuran font header */
+    }
+  
+    .kontenutama {
+      flex-direction: column;
+      height: auto;
+      gap: 15px;
+    }
+  
+    /* Menyesuaikan konten */
+    .content {
+      padding: 15px;
+      gap: 10px;
+    }
+  
+    .content-item {
+      padding: 10px;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
